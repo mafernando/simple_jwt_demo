@@ -46,14 +46,14 @@ For a more in depth exploration of this topic, see [here](https://www.sitepoint.
    1. Like this:
 
         ```console
-        curl -X POST -d email="a@a.com" -d password="changeme" http://localhost:3000/auth_user 
+        curl -X POST -d email="jdoe@acme.com" -d password="changeme" http://localhost:3000/auth_user 
         ```
    2. To get back a token back
 
         ```console
         {
         	"auth_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.LgnvSfjuwtADkAsO6OL7jvjyivYvlC3ZwXgMjuhMcYg",
-        	"user":{"id":1,"email":"a@a.com"}
+        	"user":{"id":1,"email":"jdoe@acme.com"}
         }
         ```
 
