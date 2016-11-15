@@ -59,4 +59,4 @@ curl --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2
 
 ## License ##
 
-This code is licensed under the [Apache 2.0 License](https://raw.githubusercontent.com/mafernando/api/master/LICENSE).
+This code is licensed under the [Apache 2.0 License](https://github.com/mafernando/simple_jwt_demo/blob/master/LICENSE.txt).
