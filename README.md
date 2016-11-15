@@ -15,7 +15,7 @@ For a more in depth exploration of this topic, see [here](https://www.sitepoint.
 
 2. Run `bundle install` from inside repo directory to install gems.
 
-3. Initialize SQLite database: `rake db:create && rake db:migrate`
+3. Initialize SQLite database: `rake db:create && rake db:migrate`.
 
 4. Add dummy user:
    1. Using the `Rails` console:
