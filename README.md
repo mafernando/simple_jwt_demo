@@ -36,26 +36,41 @@ rails s
 2. In separate console, issue `curl` to `localhost:3000`:
    1. Like this:
 
-        ```c
-        printf("Hello, World!");
+        ```console
+        {"errors":["Not Authenticated"]}
         ```
 
    - This shows that the endpoint is checking for a JWT Token.
 
-3. Now issue a login request to get back a token:
-```console
-curl -X POST -d email="a@a.com" -d password="changeme" http://localhost:3000/auth_user 
-# {
-# 	"auth_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.LgnvSfjuwtADkAsO6OL7jvjyivYvlC3ZwXgMjuhMcYg",
-# 	"user":{"id":1,"email":"a@a.com"}
-# }
-```
+3. Now issue a login request
+   1. Like this:
 
-4. Pass along the token in a subsequent request to see a successful authentication:
-```console
-curl --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.LgnvSfjuwtADkAsO6OL7jvjyivYvlC3ZwXgMjuhMcYg" http://localhost:3000/home
-# {"logged_in":true}
-```
+        ```console
+        curl -X POST -d email="a@a.com" -d password="changeme" http://localhost:3000/auth_user 
+        ```
+   2. To get back a token back
+
+        ```console
+        {
+        	"auth_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.LgnvSfjuwtADkAsO6OL7jvjyivYvlC3ZwXgMjuhMcYg",
+        	"user":{"id":1,"email":"a@a.com"}
+        }
+        ```
+
+4. Pass along the token in request:
+   1. Like this:
+
+        ```console
+        curl --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.LgnvSfjuwtADkAsO6OL7jvjyivYvlC3ZwXgMjuhMcYg" http://localhost:3000/home
+        ```
+   2. To see a successful authentication:
+
+        ```console
+        {
+        	"auth_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.LgnvSfjuwtADkAsO6OL7jvjyivYvlC3ZwXgMjuhMcYg",
+        	"user":{"id":1,"email":"a@a.com"}
+        }
+        ```
 
 ## License ##
 
