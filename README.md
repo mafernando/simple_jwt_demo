@@ -1,7 +1,7 @@
 Simple JWT Demo
 =============
 
-A simple implementation of JWT with Rails for demo purposes. 
+A simple demo implementation of JWT with Rails. 
 
 For a more in depth exploration of this topic, see [here](https://www.sitepoint.com/introduction-to-using-jwt-in-rails/).
 
@@ -29,9 +29,11 @@ rails> User.create(email:'a@a.com', password:'changeme', password_confirmation:'
 
 ## Simple JWT Demo: ##
 1. Start rails server.
-```console
-rails s 
-```
+   1. Like this:
+
+        ```console
+        rails s
+        ```
 
 2. In separate console, issue `curl` to `localhost:3000`:
    1. Like this:
