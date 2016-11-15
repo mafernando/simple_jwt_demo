@@ -15,18 +15,16 @@ For a more in depth exploration of this topic, see [here](https://www.sitepoint.
 
 2. Run `bundle install` from inside repo directory to install gems.
 
-3. Initialize SQLite database:
-```console
-  rake db:create
-  rake db:migrate
-```
+3. Initialize SQLite database: `rake db:create && rake db:migrate`
 
-4. Add dummy user in Rails console:
-```console
-rails c
-rails> User.create(email:'a@a.com', password:'changeme', password_confirmation:'changeme')
-```
+4. Add dummy user:
+   1. Using the `Rails` console:
 
+        ```console
+        rails c
+        rails> User.create(email:'jdoe@acme.com', password:'changeme', password_confirmation:'changeme')
+        ```
+        
 ## Simple JWT Demo: ##
 1. Start rails server.
    1. Like this:
@@ -68,10 +66,7 @@ rails> User.create(email:'a@a.com', password:'changeme', password_confirmation:'
    2. To see a successful authentication:
 
         ```console
-        {
-        	"auth_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.LgnvSfjuwtADkAsO6OL7jvjyivYvlC3ZwXgMjuhMcYg",
-        	"user":{"id":1,"email":"a@a.com"}
-        }
+        {"logged_in":true}
         ```
 
 ## License ##
