@@ -48,7 +48,7 @@ For a more in depth exploration of this topic, see [here](https://www.sitepoint.
         ```console
         curl -X POST -d email="jdoe@acme.com" -d password="changeme" http://localhost:3000/auth_user 
         ```
-   2. To get back a token back
+   2. To get back a token:
 
         ```console
         {
