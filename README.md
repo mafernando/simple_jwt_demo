@@ -33,8 +33,8 @@ For a more in depth exploration of this topic, see [here](https://www.sitepoint.
         rails s
         ```
 
-2. In separate console, issue `curl` to `localhost:3000`:
-   1. Like this:
+2. In separate console, issue `curl` to `localhost:3000/home`:
+   1. Which returns:
 
         ```console
         {"errors":["Not Authenticated"]}
